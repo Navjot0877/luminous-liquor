@@ -1,0 +1,53 @@
+.login-input{
+    height: 600px;
+    width: 600px;
+    margin-left: 130px;
+}
+
+.login-input h1{
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.login-input h3{
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(128, 127, 127);
+    margin-top: 10px;
+}
+
+.login-input input[type="text"]{
+    height: 40px;
+    width: 350px;
+    margin-top: 30px;
+    border-radius: 15px;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 0px 5px 3px -1px grey;
+    border: 0;
+
+}
+
+.login-input input[type="button"]{
+    height: 40px;
+    width: 280px;
+    margin-top: 30px;
+    border-radius: 25px;
+    margin-left: 30px;
+    background-color: rgba(86, 159, 69, 0.938);
+    border: 0;
+
+}
+
+.login-input p{
+    font-size: 13px;
+    margin-left: 56px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.login-input a{
+    color: rgba(86, 159, 69, 0.938);
+    text-decoration: none;
+}
