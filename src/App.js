@@ -4,6 +4,7 @@ import "./App.css";
 import Signup from "./signup/page/Signup";
 import Login from "./login/page/Login";
 import Homepage from "./Welcome/welcome";
+import Activate from "./signup/components/Activate";
 
 //import Welcome from './Welcome/welcome.js';
 
@@ -13,6 +14,7 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes>
+        <Route path="/activate" element={<Activate/>} />
           <Route
             exact
             path="/login"
