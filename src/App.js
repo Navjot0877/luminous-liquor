@@ -4,7 +4,9 @@ import "./App.css";
 import Signup from "./signup/page/Signup";
 import Login from "./login/page/Login";
 import Homepage from "./Welcome/welcome";
-import Activate from "./signup/components/Activate";
+import ActivationEmail from "./ActivationEmail";
+import ForgotPassword from "./ForgotPassword";
+import ResetPassword from "./ResetPassword";
 
 //import Welcome from './Welcome/welcome.js';
 
@@ -14,7 +16,6 @@ const App = () => {
     <div className="App">
       <Router>
         <Routes>
-        <Route path="/activate" element={<Activate/>} />
           <Route
             exact
             path="/login"
@@ -32,6 +33,13 @@ const App = () => {
               )
             }
           />
+           <Route path="/activate/:activation_token" element={<ActivationEmail />} />
+          <Route
+            exact
+            path="/forgot_password"
+            element={<ForgotPassword />}
+          />
+           <Route path="/reset/:token" element={<ResetPassword />} />
         </Routes>
       </Router>
     </div>

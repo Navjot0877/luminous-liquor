@@ -58,6 +58,9 @@ const LoginInput = ({ setLogInUser }) => {
       <p>
         Need an account? Please <a href="/register">Register</a>
       </p>
+      <p>
+         <a href="/forgot_password">Forgot Your Password</a>
+      </p>
     </div>
   );
 };
