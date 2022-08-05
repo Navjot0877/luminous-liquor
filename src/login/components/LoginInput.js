@@ -64,7 +64,7 @@ const LoginInput = ({ setLogInUser }) => {
    function handleCallback(response){
     console.log(response)
     try {
-      axios.post("http://localhost:9005/googleLogin", {tokenId: response.credential}).then((res) => {
+      axios.post("https://luminious-liquor.herokuapp.com/googleLogin", {tokenId: response.credential}).then((res) => {
       alert(res.data.message);
 
      
@@ -89,7 +89,7 @@ const LoginInput = ({ setLogInUser }) => {
     {
     try {
       const {accessToken, userID} = response
-      axios.post("http://localhost:9005/facebookLogin", {accessToken, userID}).then((res) => {
+      axios.post("https://luminious-liquor.herokuapp.com/facebookLogin", {accessToken, userID}).then((res) => {
       document.getElementById("xyzzz").innerHTML = res.data.message;
       if(res.data.user !== undefined){
         sessionStorage.setItem('myUser', JSON.stringify(res.data.user))
@@ -117,7 +117,7 @@ const LoginInput = ({ setLogInUser }) => {
   }, [user])
 
   const login = () => {
-    axios.post("http://localhost:9005/login", user).then((res) => {
+    axios.post("https://luminious-liquor.herokuapp.com/login", user).then((res) => {
       // alert(res.data.message);
       if(res.data.message != "success"){
       setOpen(true);
