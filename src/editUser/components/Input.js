@@ -18,7 +18,7 @@ const Input = () =>{
     const [newAge, setAge] = useState(18)
 
     useEffect(() =>{
-        axios.get('http://localhost:9005/currentUser')
+        axios.get('https://luminious-liquor.herokuapp.com/currentUser')
         .then(res => {
             //console.log(res)
             setCurrentUser(res.data)
@@ -38,7 +38,7 @@ const Input = () =>{
             "age": newAge,
         }
         console.log(currentUser._id)
-        const url = 'http://localhost:9005/edituser/' + currentUser._id
+        const url = 'https://luminious-liquor.herokuapp.com/edituser/' + currentUser._id
         axios.put(url, editUser).catch((err) => {
             console.log(err)
         })
@@ -54,7 +54,7 @@ const Input = () =>{
             "age": newAge,
         }
 
-        const url = 'http://localhost:9005/edituser/' + currentUser._id
+        const url = 'https://luminious-liquor.herokuapp.com/edituser/' + currentUser._id
         axios.delete(url).catch((err) => {
             console.log(err)
         })

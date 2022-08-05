@@ -5,7 +5,7 @@ const Recent = () =>{
 
     const[loadItems, setLoadItems] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:9005/test/capstones')
+        fetch('https://luminious-liquor.herokuapp.com/test/capstones')
         .then(response => response.json())
         .then(data => {
             setLoadItems(data);

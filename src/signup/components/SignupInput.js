@@ -88,7 +88,7 @@ const SignupInput = () => {
     if (name && email && password && phone && age) {
       if(age>=18){
       load(false);
-      axios.post("http://localhost:9005/register", user).then((res) => {
+      axios.post("https://luminious-liquor.herokuapp.com/register", user).then((res) => {
         load(true);
         setOpenSent(true);
         // alert(res.data.message);

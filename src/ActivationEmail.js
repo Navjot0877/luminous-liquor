@@ -10,7 +10,7 @@ const {activation_token} = useParams()
             console.log(activation_token)
             if(activation_token){
             try {
-                axios.post("http://localhost:9005/activate", {activation_token}).then((res) => {
+                axios.post("https://luminious-liquor.herokuapp.com/activate", {activation_token}).then((res) => {
                 alert(res.data.message);
                  navigate("/login");
       })

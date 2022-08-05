@@ -21,6 +21,7 @@ import { deepOrange, deepPurple } from '@mui/material/colors';
 import edit from '../../editUser/page/EditUser'
 import { useNavigate } from "react-router-dom";
 import Sidebar_loggedout from "../../homepage/components/Sidebar_loggedout";
+import Button from '@mui/material/Button';
 
 
 
@@ -49,11 +50,10 @@ const Navbar_loggedout = () => {
     const [searched, setSearched] = useState("");
 
     
-  const navigate = useNavigate();
 
 
   
-
+  const navigate = useNavigate();
 
     useEffect(()=> {
         Axios.get("http://localhost:9005/read").then((response)=>{
@@ -125,8 +125,7 @@ const Navbar_loggedout = () => {
 
       function logout(){
         sessionStorage.removeItem('myUser');
-        navigate("/");
-        
+        navigate("/");  
       }
 
     const onChangeHandler = (text) => {
@@ -156,6 +155,10 @@ const Navbar_loggedout = () => {
         setSearched("");
       };
 
+
+      function loginMe(){
+        navigate("/login");
+      }
 
 
     return (
@@ -379,9 +382,10 @@ const Navbar_loggedout = () => {
 
                         <div className="dropdown">
                         <div className="dropbtn">
-                          <a href="/login">
-                        <img src={User} className="iconImg" alt="" />
-                        </a>
+                       
+                          <Button className="changethis" onClick={()=>loginMe()}><img src={User} className="iconImg" alt="" /></Button>
+                        
+                        
                         </div>
                        
                         </div>

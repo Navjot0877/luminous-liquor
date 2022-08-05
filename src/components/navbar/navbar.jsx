@@ -70,7 +70,7 @@ const Navbar2 = () => {
 
 
     useEffect(()=> {
-        Axios.get("http://localhost:9005/read/"+userId).then((response)=>{
+        Axios.get("https://luminious-liquor.herokuapp.com/read/"+userId).then((response)=>{
         setFavList(response.data);
         
 
@@ -86,7 +86,7 @@ const Navbar2 = () => {
 
         
         {favId.map((val) => {
-            Axios.get("http://localhost:9005/readFav/" + userId).then((response)=>{
+            Axios.get("https://luminious-liquor.herokuapp.com/readFav/" + userId).then((response)=>{
                 setFavInfoList(response.data);
                 setFilteredData(response.data);
                
@@ -102,7 +102,7 @@ const Navbar2 = () => {
 
 
     useEffect(()=> {
-        Axios.get("http://localhost:9005/readCart/"+userId).then((response)=>{
+        Axios.get("https://luminious-liquor.herokuapp.com/readCart/"+userId).then((response)=>{
         setCartList(response.data);
         console.log(response.data);
         console.log(cartList);
@@ -112,7 +112,7 @@ const Navbar2 = () => {
 
 
     useEffect(()=> {
-        Axios.get("http://localhost:9005/productInfo", {id: 1}).then((response)=>{
+        Axios.get("https://luminious-liquor.herokuapp.com/productInfo", {id: 1}).then((response)=>{
         setproductInfo(response.data);
         console.log(response.data);
         console.log(productInfoList);
@@ -129,7 +129,7 @@ const Navbar2 = () => {
 
     useEffect(() => {
         const loadUsers = async () => {
-          const response = await Axios.get("http://localhost:9005/productNames");
+          const response = await Axios.get("https://luminious-liquor.herokuapp.com/productNames");
           //console.log(response.data);
           setproductNames(response.data);
         };
@@ -390,7 +390,7 @@ const Navbar2 = () => {
 if(cartList.length==0)
 {
     return <a href="#">No items found</a>
-}
+} 
 else
 {
     return <a href="#">{val.name}</a>

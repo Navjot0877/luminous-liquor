@@ -19,7 +19,7 @@ const Footer = () => {
     useEffect(()=> {
 
 
-           axios.get("http://localhost:9005/productInfo").then((response)=>{
+           axios.get("https://luminious-liquor.herokuapp.com/productInfo").then((response)=>{
             setFilteredData(response.data);
            
             })

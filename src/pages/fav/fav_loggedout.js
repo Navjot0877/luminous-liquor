@@ -44,7 +44,7 @@ const Fav_loggedout = () => {
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(()=> {
-      Axios.get("http://localhost:9005/readCart").then((response)=>{
+      Axios.get("https://luminious-liquor.herokuapp.com/readCart").then((response)=>{
       setCartList(response.data);
       })
     }, [cartList])
@@ -54,7 +54,7 @@ const Fav_loggedout = () => {
 
         
   
-          Axios.get("http://localhost:9005/readFav/" + 2).then((response)=>{
+          Axios.get("https://luminious-liquor.herokuapp.com/readFav/" + 2).then((response)=>{
               setFavInfoList(response.data);
               setFilteredData(response.data);
              
@@ -69,12 +69,12 @@ const Fav_loggedout = () => {
 
   function handleRemove (id) {
 // alert(id)
-    Axios.post("http://localhost:9005/delFav/" + id)
+    Axios.post("https://luminious-liquor.herokuapp.com/delFav/" + id)
       
 
         
   
-      Axios.get("http://localhost:9005/readFav/" + 2).then((response)=>{
+      Axios.get("https://luminious-liquor.herokuapp.com/readFav/" + 2).then((response)=>{
           setFavInfoList(response.data);
           setFilteredData(response.data);
          

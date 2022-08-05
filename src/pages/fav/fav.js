@@ -61,7 +61,7 @@ const Fav = () => {
     })
  
     useEffect(()=> {
-  Axios.get("http://localhost:9005/readFav/" + userId).then((response)=>{
+  Axios.get("https://luminious-liquor.herokuapp.com/readFav/" + userId).then((response)=>{
               setFavInfoList(response.data);
               setFilteredData(response.data);
 
@@ -90,11 +90,11 @@ const Fav = () => {
 
   function handleRemove (id) {
 // alert(id)
-    Axios.post("http://localhost:9005/delFav/" + id+'/'+userId)
+    Axios.post("https://luminious-liquor.herokuapp.com/delFav/" + id+'/'+userId)
       
 
 
-    Axios.get("http://localhost:9005/readFav/" + userId).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/readFav/" + userId).then((response)=>{
       setFavInfoList(response.data);
       setFilteredData(response.data);
 

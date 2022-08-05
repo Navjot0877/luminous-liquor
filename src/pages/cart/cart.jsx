@@ -15,7 +15,7 @@ const Cart = () => {
 
     useEffect(()=> {
         
-        Axios.get("http://localhost:4010/readCart").then((response)=>{
+        Axios.get("https://luminious-liquor.herokuapp.com/readCart").then((response)=>{
         setCartList(response.data);
         console.log(response.data);
         console.log(cartList);

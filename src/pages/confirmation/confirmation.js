@@ -116,7 +116,7 @@ const handlePostal = event => {
 
 function check(){
   
-    Axios.get("http://localhost:9005/readpostal/" + readPost).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/readpostal/" + readPost).then((response)=>{
     setpostalList(response.data);
     
   

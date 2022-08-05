@@ -240,6 +240,11 @@ margin: 0;
   /* display: none; */
  } 
 
+ .dropbtn button:hover{
+   box-shadow: none;
+   background-color: transparent;
+ }
+
 
   .hamburger {
   /* display: none; */

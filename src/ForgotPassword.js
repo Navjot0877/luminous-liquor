@@ -20,7 +20,7 @@ function ForgotPassword(){
 
     const forgotPassword = async() => {
         try {
-            axios.post("http://localhost:9005/forgotPassword", {email}).then((res) => {
+            axios.post("https://luminious-liquor.herokuapp.com/forgotPassword", {email}).then((res) => {
             alert(res.data.message);
             //navigate("/login");
   })

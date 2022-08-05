@@ -26,7 +26,7 @@ const Footer_loggedout = () => {
     useEffect(()=> {
 
 
-           axios.get("http://localhost:9005/productInfo2").then((response)=>{
+           axios.get("https://luminious-liquor.herokuapp.com/productInfo2").then((response)=>{
             setFilteredData(response.data);
            
             })
@@ -36,7 +36,7 @@ const Footer_loggedout = () => {
     useEffect(()=> {
 
 
-        axios.get("http://localhost:9005/productInfo3").then((response)=>{
+        axios.get("https://luminious-liquor.herokuapp.com/productInfo3").then((response)=>{
          setFilteredData2(response.data);
         
          })
@@ -50,7 +50,7 @@ const Footer_loggedout = () => {
 
     const handleAdd = () =>{
         if (added){
-         Axios.post("http://localhost:9005/delFav", {productID: 1, userId: 2})
+         Axios.post("https://luminious-liquor.herokuapp.com/delFav", {productID: 1, userId: 2})
             setAdd(false);
       
             
@@ -58,7 +58,7 @@ const Footer_loggedout = () => {
         } 
         else{
             setAdd(true);
-             Axios.post("http://localhost:9005/favourite")
+             Axios.post("https://luminious-liquor.herokuapp.com/favourite")
              // Axios.post("http://localhost:3010/product")
           
         }

@@ -119,7 +119,7 @@ const handlePostal = event => {
 
 function check(){
   
-    Axios.get("http://localhost:9005/readpostal/" + readPost).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/readpostal/" + readPost).then((response)=>{
     setpostalList(response.data);
     
   
@@ -229,7 +229,7 @@ var payPrice = "25.98";
     navigate('/confirmation',{grand: location.state.grand});
   
      console.log("strtrt")
-    //   Axios.post("http://localhost:9005/order/"+4+'/'+location.state.grand+'/'+address+'/'+readPost+'/'+'Guryuvraj').then((res) => {
+    //   Axios.post("https://luminious-liquor.herokuapp.com/order/"+4+'/'+location.state.grand+'/'+address+'/'+readPost+'/'+'Guryuvraj').then((res) => {
   
     // });
 
@@ -237,7 +237,7 @@ var payPrice = "25.98";
 
 
 
-    //  Axios.post("http://localhost:9005/sendme").then((res) => {
+    //  Axios.post("https://luminious-liquor.herokuapp.com/sendme").then((res) => {
   
     // });
 

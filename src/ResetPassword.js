@@ -27,7 +27,7 @@ function ResetPassword(){
     const resetPassword = async() =>{
         if(password === cf_password){
         try {
-            axios.post("http://localhost:9005/reset", {password}, {
+            axios.post("https://luminious-liquor.herokuapp.com/reset", {password}, {
                 headers: {Authorization: token}
             }).then((res) => {
             alert(res.data.message);

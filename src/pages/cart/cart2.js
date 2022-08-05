@@ -41,7 +41,7 @@ const Cart2  = () => {
     const [counter, setCounter] = useState(parseInt(1));
 
     useEffect(()=> {
-      Axios.get("http://localhost:9005/readCart").then((response)=>{
+      Axios.get("https://luminious-liquor.herokuapp.com/readCart").then((response)=>{
       setCartList(response.data);
       console.log(response.data);
       console.log(cartList);
@@ -51,7 +51,7 @@ const Cart2  = () => {
     
 //Fetching all the details of Checked Out Product
   useEffect(()=> {
-    Axios.get("http://localhost:9005/productInfo/" + param.id).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/productInfo/" + param.id).then((response)=>{
     setproductInfo(response.data);
     
 

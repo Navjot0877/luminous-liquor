@@ -17,11 +17,11 @@ const ChatBox = (props) => {
     const[sender, setSender] = useState("");
 
     // useEffect(() => {
-    //     axios.get('http://localhost:9005/api/convo/' + currentid).then((response) => {
+    //     axios.get('https://luminious-liquor.herokuapp.com/api/convo/' + currentid).then((response) => {
     //         setConvo(response.data[0])
     //     })
     //     // const loadConvo = async () => {
-    //     //   const response = await axios.get('http://localhost:9005/api/convo/' + currentid);
+    //     //   const response = await axios.get('https://luminious-liquor.herokuapp.com/api/convo/' + currentid);
     //     //   //console.log(response.data);
     //     //   setConvo(response.data[0]);
     //     // };
@@ -29,11 +29,11 @@ const ChatBox = (props) => {
     // },[]);
 
     useEffect(() => {
-        axios.get('http://localhost:9005/api/message/' + props.convo._id).then((response) => {
+        axios.get('https://luminious-liquor.herokuapp.com/api/message/' + props.convo._id).then((response) => {
             setMessages(response.data)
         })
         // const loadMessage = async () => {
-        //   const response = await axios.get('http://localhost:9005/api/message/' + convo._id);
+        //   const response = await axios.get('https://luminious-liquor.herokuapp.com/api/message/' + convo._id);
         //   setMessages(response.data);
         // };
         // loadMessage();
@@ -45,7 +45,7 @@ const ChatBox = (props) => {
             sender: currentid,
             text: chat
         }
-        axios.post('http://localhost:9005/api/message/', message)
+        axios.post('https://luminious-liquor.herokuapp.com/api/message/', message)
         setMessages([...messages, message])
         setChat("")
         e.preventDefault()

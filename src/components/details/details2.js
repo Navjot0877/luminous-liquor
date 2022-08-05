@@ -92,7 +92,7 @@ const Details2 = (props) => {
 
 // Fetching Product Info
     useEffect(()=> {
-            Axios.get("http://localhost:9005/productInfo/" + id.id).then((response)=>{
+            Axios.get("https://luminious-liquor.herokuapp.com/productInfo/" + id.id).then((response)=>{
             setproductInfo(response.data);
             console.log(response.data);
             })
@@ -102,7 +102,7 @@ const Details2 = (props) => {
 
 // Reading if the product is in cart or not
     useEffect(()=> {
-        Axios.get("http://localhost:9005/readCart/"+id.id+ '/' + userId).then((response)=>{
+        Axios.get("https://luminious-liquor.herokuapp.com/readCart/"+id.id+ '/' + userId).then((response)=>{
       
         setCheckCart(response.data);
 
@@ -126,7 +126,7 @@ const Details2 = (props) => {
 
     // Reading if the product is in fav or not
     useEffect(()=> {
-      Axios.get("http://localhost:9005/readFav/"+id.id+ '/' + userId).then((response)=>{
+      Axios.get("https://luminious-liquor.herokuapp.com/readFav/"+id.id+ '/' + userId).then((response)=>{
     
       setAddFav(response.data);
 
@@ -155,7 +155,7 @@ const Details2 = (props) => {
 
     const handleAdd = () =>{
        if (added){
-        Axios.post("http://localhost:9005/delFav/"+id.id+'/'+userId)
+        Axios.post("https://luminious-liquor.herokuapp.com/delFav/"+id.id+'/'+userId)
         setOpenCart(false);
            setAdd(false);
            setremoveFav(true)
@@ -171,13 +171,13 @@ const Details2 = (props) => {
            productInfoList.map((val, key) =>
          
        
-           Axios.post("http://localhost:9005/favourite/"+val.prodId+'/'+ userId +'/'+val.name+'/'+val.description+'/'+val.price),
+           Axios.post("https://luminious-liquor.herokuapp.com/favourite/"+val.prodId+'/'+ userId +'/'+val.name+'/'+val.description+'/'+val.price),
          
            );
 
 
 
-            // Axios.post("http://localhost:9005/favourite")
+            // Axios.post("https://luminious-liquor.herokuapp.com/favourite")
             // Axios.post("http://localhost:3010/product")
          
        }
@@ -194,7 +194,7 @@ if(addedCart==true){
     setremoveFav(false);
     setRemoveCart(true);
 
-    Axios.post("http://localhost:9005/delCart/"+id.id+'/'+userId)
+    Axios.post("https://luminious-liquor.herokuapp.com/delCart/"+id.id+'/'+userId)
     setAddLabel("Add to Cart")
 }
 else{
@@ -209,7 +209,7 @@ setAddCart(true);
     productInfoList.map((val, key) =>
          
           
-    Axios.post("http://localhost:9005/cart/"+val.prodId+'/'+ userId +'/'+val.name+'/'+val.description+'/'+val.price)
+    Axios.post("https://luminious-liquor.herokuapp.com/cart/"+val.prodId+'/'+ userId +'/'+val.name+'/'+val.description+'/'+val.price)
   );
 
  } }

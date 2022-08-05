@@ -49,7 +49,7 @@ const Checkout  = () => {
     
 //Fetching all the details of Checked Out Product
   useEffect(()=> {
-    Axios.get("http://localhost:9005/productInfo/" + location.state.id).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/productInfo/" + location.state.id).then((response)=>{
     setproductInfo(response.data);
    
 

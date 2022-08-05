@@ -47,7 +47,7 @@ const About  = () => {
     
 //Fetching all the details of Checked Out Product
   useEffect(()=> {
-    Axios.get("http://localhost:9005/productInfo/" + param.id).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/productInfo/" + param.id).then((response)=>{
     setproductInfo(response.data);
    
     })
@@ -80,7 +80,7 @@ const handleChange = event => {
 
 function check(){
   
-    Axios.get("http://localhost:9005/readpostal/" + mypost).then((response)=>{
+    Axios.get("https://luminious-liquor.herokuapp.com/readpostal/" + mypost).then((response)=>{
     setpostalList(response.data);
     
   
